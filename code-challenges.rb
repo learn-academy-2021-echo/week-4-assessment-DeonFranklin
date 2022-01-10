@@ -44,10 +44,10 @@ def no_vowels(string)
   result = string.gsub(/[aeiou]/i, "")
   # Just to verify I used the method correctly, and for practice, I subbed the '' for '1'
   # and received this result
-  result = string.gsub(/[aeiou]/i, "1")
-  "R1bb1r S11l"
-  "Sgt P1pp1r"
-  "1bb1y R11d"
+#   result = string.gsub(/[aeiou]/i, "1")
+#   "R1bb1r S11l"
+#   "Sgt P1pp1r"
+#   "1bb1y R11d"
   return result
 end
 
@@ -83,9 +83,9 @@ p palindrome("#{is_palindrome3}")
 # "7 is odd"
 # "42 is odd"
 # "221 is odd"
-# "R1bb1r S11l"
-# "Sgt P1pp1r"
-# "1bb1y R11d"
+# "Rbbr Sl"
+# "Sgt Pppr"
+# "bby Rd"
 # "Racecar is a palindrome."
 # "LEARN is not a palindrome."
 # "Rotator is a palindrome."
