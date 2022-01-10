@@ -41,9 +41,10 @@ describe("chopAndSwap", () => {
     );
   });
 });
-
+// I feel like I should revisit this challenge and get a better understanding of jest as my understanding it not any where near w
 // b) Create the function that makes the test pass.
 const chopAndSwap = (array) => {
+  // used .shift() to remove the first element of the array.
   arrChop = array.shift();
 };
 
@@ -59,6 +60,7 @@ var nums2 = [109, 5, 9, 67, 8, 24];
 describe("minMax", () => {
   it("takes array of numbers and returns array of the minimum and maximum numbers in order.", () => {
     expect(minMax(nums1)).toEqual([-8, 90]);
+    // I do not understand why the arguments are not executing.
     expect(minMax(nums2)).toEqual([5, 109]);
   });
 });
@@ -75,10 +77,11 @@ const minMax = (array) => {
   }
   let result = ["min: " + min, "max: " + max];
   return result;
-
-  return minMax(numArr1);
-  return minMax(numArr2);
+// I noticed the issue I am having most derives from creating the functions after creating the test.
+  return (minMax(numArr1));
+  return (minMax(numArr2));
 };
+//Though i feel the test and function have been properly implemented, I am having issues with the received/expected arguments in the test.
 
 // b) Create the function that makes the test pass.
 
@@ -91,6 +94,7 @@ let testArray2 = [7, 8, 2, 3, 1, 5, 4];
 const resArray = testArray1.concat(testArray2);
 
 // Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
+//created noDupes function 
 describe("noDupes", () => {
   it("takes in two arrays as arguments and returns one array with no duplicates", () => {
     expect(noDupes(resArray)).toEqual([3, 7, 10, 5, 4, 8, 2, 1]);
@@ -109,6 +113,7 @@ function noDupes(array) {
     }
   }
   return newArr;
+  //I set an additional array to check my function them commented it out.
   //   let numsArray = [[3, 7, 10, 5, 4, 3, 3, 7, 8, 2, 3, 1, 5, 4]];
   let finalArray = noDupes(resArray);
   return finalArray;
